@@ -132,6 +132,20 @@
   padding-top: 1rem;
 }
 
+/* ...existing code... */
+.footer-social-right {
+  margin-top: 0rem;
+  margin-right: 12rem;  
+  text-align: right;
+}
+@media (max-width: 900px) {
+  .footer-social-right {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+}
+/* ...existing code... */
+
 /* Responsive */
 @media (max-width: 900px) {
   .footer-container {
