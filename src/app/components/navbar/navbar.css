@@ -1,5 +1,5 @@
 .navbar {
-
+  background-color: #b2e0ee;
   border-bottom: 2px solid #b2e0ee;
   font-family: 'Segoe UI', Arial, sans-serif;
   width: 100vw;
@@ -36,7 +36,7 @@
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 4rem;
+  gap: 12rem;
   margin: 0;
   padding: 0;
   align-items: center;
