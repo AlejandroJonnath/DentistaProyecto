@@ -1,0 +1,152 @@
+
+.footer {
+
+  border-top: 2px solid #b2e0ee;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  width: 100vw;
+  min-width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 2.5rem 0 0.5rem 0;
+  margin-top: 3rem;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 220px;
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand {
+  flex: 1.5 1 300px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo img {
+  height: 44px;
+  width: 44px;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  color: #1e90b8;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer-desc {
+  color: #4a6c7a;
+  font-size: 1rem;
+  margin: 1rem 0 1.2rem 0;
+  max-width: 260px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 0.7rem;
+  transition: transform 0.2s;
+}
+.footer-social a:last-child { margin-right: 0; }
+.footer-social img {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(0.2);
+}
+.footer-social a:hover {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+.footer-links,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 0.7rem;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #1e90b8;
+  font-size: 1.08rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.footer-links li a:hover {
+  color: #0a6c8e;
+  border-bottom: 2px solid #0a6c8e;
+}
+
+.footer-col h4 {
+  color: #1e90b8;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.footer-contact li {
+  color: #4a6c7a;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-copy {
+  color: #6c8fa1;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 0.5px;
+  border-top: 1px solid #b2e0ee;
+  padding-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  .footer-col, .footer-brand {
+    min-width: 0;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .footer-copy {
+    margin-top: 1.2rem;
+    padding-top: 0.8rem;
+  }
+}

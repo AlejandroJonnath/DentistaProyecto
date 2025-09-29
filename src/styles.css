@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #b3d3dd 0%, #f8ffff 100%);
+  min-height: 100vh;
+  color: #222;
+  /* Sombra suave para dar profundidad */
+  box-shadow: 0 0 40px 0 rgba(30, 144, 184, 0.04) inset;
+}
+
+/* Un detalle sutil: líneas divisorias para secciones */
+section {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(30, 144, 184, 0.07);
+}

@@ -1,0 +1,52 @@
+.header-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 0;
+}
+
+.btn {
+  padding: 16px 38px;
+  border: none;
+  border-radius: 30px; /* Bordes más redondeados */
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.10), 0 1.5px 4px rgba(30,144,184,0.10);
+  text-shadow: 1px 2px 6px rgba(0,0,0,0.25); /* Sombra negra al texto */
+  letter-spacing: 1px;
+  transition: 
+    transform 0.15s,
+    box-shadow 0.2s,
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.btn:hover, .btn:focus {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 2px 8px rgba(30,144,184,0.13);
+  outline: none;
+}
+
+.btn-pacientes {
+  background: linear-gradient(90deg, #ffb347 0%, #ff7f50 100%);
+  color: #fff;
+  border: 2px solid #ff9800;
+}
+
+.btn-pacientes:hover, .btn-pacientes:focus {
+  background: linear-gradient(90deg, #ff9800 0%, #ffb347 100%);
+  color: #fff;
+}
+
+.btn-doctores {
+  background: linear-gradient(90deg, #00bfff 0%, #1e90ff 100%);
+  color: #fff;
+  border: 2px solid #00bfff;
+}
+
+.btn-doctores:hover, .btn-doctores:focus {
+  background: linear-gradient(90deg, #1e90ff 0%, #00bfff 100%);
+  color: #fff;
+}
