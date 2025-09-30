@@ -39,18 +39,26 @@
   font-size: 1.1rem;
   color: #0a6c8e;
   display: flex;
-  align-items: center;
-  gap: 1.2rem;
+  align-items: center;      /* Centra verticalmente */
+  gap: 2.5rem;              /* Más espacio para imágenes grandes */
 }
 
 .contact-photo {
-  width: 70px;
-  height: 70px;
+  width: 200px;             /* Mucho más grande */
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #b2e0ee;
   background: #e3f6fc;
   box-shadow: 0 2px 8px rgba(30,144,184,0.10);
+  flex-shrink: 0;           /* Evita que la imagen se reduzca */
+}
+
+.contact-card > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Centra el texto verticalmente respecto a la imagen */
+  min-width: 0;             /* Evita desbordamientos */
 }
 
 .contact-card strong {
@@ -98,11 +106,15 @@
     padding: 0.8rem 1rem;
     font-size: 1rem;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.7rem;
+    align-items: center;    /* Centra imagen y texto en móviles */
+    gap: 1rem;
   }
   .contact-photo {
-    width: 55px;
-    height: 55px;
+    width: 140px;           /* Más grande en móviles también */
+    height: 140px;
+  }
+  .contact-card > div {
+    align-items: center;    /* Centra el texto debajo de la imagen */
+    text-align: center;
   }
 }

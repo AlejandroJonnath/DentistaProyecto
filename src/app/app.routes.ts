@@ -3,8 +3,9 @@ import { Main } from './pages/main/main';
 import { About } from './pages/about/about';
 import { Contact } from './pages/contact/contact';
 import { Services } from './pages/services/services';
-import { Doctor } from './pages/doctor/doctor';
+
 import { Paciente } from './pages/paciente/paciente';
+import { Doctor } from './pages/doctor/doctor';
 
 
 export const routes: Routes = [

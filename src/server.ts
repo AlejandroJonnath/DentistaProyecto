@@ -6,11 +6,22 @@ import {
 } from '@angular/ssr/node';
 import express from 'express';
 import { join } from 'node:path';
+import { Pool } from 'pg';
+import crypto from 'crypto'; // Si quieres validar en Node, pero puedes usar SQL MD5 directamente
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
 const app = express();
 const angularApp = new AngularNodeAppEngine();
+
+// Configuración de la base de datos PostgreSQL
+const dbPool = new Pool({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'clinica_dental',
+  password: 'Adriel2002*',
+  port: 5432,
+});
 
 /**
  * Example Express Rest API endpoints can be defined here.
@@ -45,6 +56,39 @@ app.use((req, res, next) => {
       response ? writeResponseToNodeResponse(response, res) : next(),
     )
     .catch(next);
+});
+
+/**
+ * Ejemplo de endpoint para probar la conexión
+ */
+app.get('/api/test-db', async (req, res) => {
+  try {
+    const result = await dbPool.query('SELECT NOW()');
+    res.json({ time: result.rows[0] });
+  } catch (err) {
+    const errorMessage = typeof err === 'object' && err !== null && 'message' in err ? (err as { message: string }).message : String(err);
+    res.status(500).json({ error: errorMessage });
+  }
+});
+
+app.post('/api/login-doctor', express.json(), async (req, res) => {
+  const { login, cedula, password } = req.body;
+  try {
+    const result = await dbPool.query(
+      `SELECT d.*, u.login, u.role
+       FROM doctors d
+       JOIN app_users u ON d.user_id = u.id
+       WHERE d.cedula = $1 AND u.login = $2 AND u.password_hash = md5($3) AND u.role = 'medico'`,
+      [cedula, login, password]
+    );
+    if (result.rows.length === 1) {
+      res.json({ success: true, doctor: result.rows[0] });
+    } else {
+      res.status(401).json({ success: false, message: 'Credenciales incorrectas' });
+    }
+  } catch (err) {
+    res.status(500).json({ error: String(err) });
+  }
 });
 
 /**
