@@ -1,0 +1,209 @@
+/* Botón 'Atrás' en la barra superior */
+.doctor-back-btn {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, #1565c0 60%, #42a5f5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 22px 8px 16px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  transition: background 0.2s, transform 0.2s;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.doctor-back-btn:hover {
+  background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+  transform: scale(1.05);
+}
+.doctor-navbar-title {
+  display: inline-block;
+  margin-left: 60px;
+  font-size: inherit;
+  font-weight: inherit;
+}
+@media (max-width: 600px) {
+  .doctor-back-btn {
+    left: 8px;
+    padding: 6px 12px 6px 10px;
+    font-size: 0.95rem;
+  }
+  .doctor-navbar-title {
+    margin-left: 44px;
+    font-size: 1rem;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+.doctor-main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #e0f7fa 0%, #f8bbd0 100%);
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  padding-top: 0px;
+  padding-bottom: 60px;
+  animation: doctorBgMove 12s ease-in-out infinite alternate;
+}
+
+@keyframes doctorBgMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.doctor-content-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0;
+  min-width: 350px;
+  padding: 0 2vw;
+}
+
+.doctor-card {
+  background: rgba(255,255,255,0.92);
+  border-radius: 22px;
+ 
+  padding: 18px 38px 36px 38px;
+  max-width: 480px;
+  width: 100%;
+  margin-bottom: 100px;
+  text-align: center;
+  backdrop-filter: blur(2.5px);
+  border: 1.5px solid #e3f2fd;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.doctor-card:hover {
+  box-shadow: 0 16px 48px rgba(25, 118, 210, 0.18);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.doctor-title {
+  color: #1976d2;
+  margin-bottom: 18px;
+  font-size: 2.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.doctor-subtitle {
+  color: #333;
+  margin-bottom: 22px;
+  font-size: 1.35rem;
+}
+
+.doctor-list {
+  text-align: left;
+  margin-bottom: 34px;
+  color: #444;
+  font-size: 1.18rem;
+  padding-left: 26px;
+}
+
+.doctor-list li {
+  margin-bottom: 12px;
+}
+
+.doctor-btn {
+  background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 44px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+}
+
+.doctor-btn:hover {
+  background: linear-gradient(90deg, #1565c0 60%, #42a5f5 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.doctor-recomendaciones {
+  background: #f1f8e9;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(76,175,80,0.08);
+  padding: 28px 30px;
+  max-width: 480px;
+  width: 100%;
+  color: #33691e;
+}
+
+.doctor-recomendaciones h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  color: #388e3c;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.doctor-recomendaciones ul {
+  margin: 0;
+  padding-left: 26px;
+  font-size: 1.13rem;
+}
+
+.doctor-recomendaciones li {
+  margin-bottom: 10px;
+}
+
+.doctor-video-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  min-width: 350px;
+  background: rgba(255,255,255,0.12);
+  padding: 0 2vw;
+  margin-bottom: 100px;
+}
+
+.doctor-video-section video, 
+.doctor-video-section iframe {
+  width: 100%;
+  max-width: 520px;
+  min-height: 320px;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+  background: #000;
+}
+
+/* Oculta header y navbar solo cuando está la página de doctor */
+.doctor-main-container ~ app-header,
+.doctor-main-container ~ app-navbar {
+  display: none !important;
+}
+
+.doctor-navbar {
+  width: 100vw;
+  background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 15px 15px 20px 15px; /* Reduce el padding vertical */
+
+  margin-bottom: 24px; /* Reduce el margen inferior */
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  letter-spacing: 0.5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}

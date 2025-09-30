@@ -1,1 +1,35 @@
-<p>doctor works!</p>
+<div class="doctor-main-container">
+  <nav class="doctor-navbar">
+    <button class="doctor-back-btn" routerLink="/" aria-label="Volver al inicio">
+      &#8592; Atrás
+    </button>
+    <span class="doctor-navbar-title">Bienvenido al Módulo de Doctor. Continúa con los siguientes pasos</span>
+  </nav>
+  <div class="doctor-content-section">
+    <div class="doctor-card">
+      <h2 class="doctor-title">Sitio Médicos</h2>
+      <p class="doctor-subtitle">Aquí podrás encontrar:</p>
+      <ul class="doctor-list">
+        <li>Detalle de pacientes hospitalizados</li>
+        <li>Recetas anteriores de pacientes</li>
+        <li>Citas con usted</li>
+      </ul>
+      <button class="doctor-btn" routerLink="/logindoctor">Ingresar</button>
+    </div>
+    <div class="doctor-recomendaciones">
+      <h3>Recomendaciones:</h3>
+      <ul>
+        <li>El formulario debe llenarlo con su correo institucional</li>
+        <li>Use la contraseña proporcionada por el hospital</li>
+        <li>Si su usuario es <b>pperez</b> usted deberá ingresar <b>pperez@dentistya.com</b></li>
+      </ul>
+    </div>
+  </div>
+  <div class="doctor-video-section">
+    <!-- Puedes cambiar el src por el video que desees o usar un iframe de YouTube -->
+    <video controls poster="https://img.freepik.com/vector-gratis/ilustracion-concepto-medico_114360-1305.jpg">
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de video.
+    </video>
+  </div>
+</div>

@@ -1,19 +1,26 @@
+
 <section class="servicios-section">
-  <h2 class="servicios-title">Servicios</h2>
+  <h2 class="servicios-title">
+    <span class="servicios-icon">🦷</span> Servicios Odontológicos
+  </h2>
   <div class="servicios-list">
     <div class="servicio-card">
+      <div class="servicio-card-icon">🪥</div>
       <h3>Limpieza dental y profilaxis</h3>
       <p>Eliminación de placa, sarro y manchas para prevenir caries y enfermedades de encías.</p>
     </div>
     <div class="servicio-card">
+      <div class="servicio-card-icon">🦷</div>
       <h3>Tratamientos de caries y restauraciones</h3>
       <p>Empastes, reconstrucciones de dientes y reparación de fracturas.</p>
     </div>
     <div class="servicio-card">
+      <div class="servicio-card-icon">😬</div>
       <h3>Ortodoncia</h3>
       <p>Corrección de la alineación de los dientes y la mordida mediante brackets o alineadores invisibles.</p>
     </div>
     <div class="servicio-card">
+      <div class="servicio-card-icon">🩺</div>
       <h3>Endodoncia (tratamiento de conductos)</h3>
       <p>Tratamiento de infecciones o daños en la pulpa dental para salvar el diente.</p>
     </div>
@@ -21,7 +28,9 @@
 </section>
 
 <section class="doctores-section">
-  <h2 class="doctores-title">Doctores</h2>
+  <h2 class="doctores-title">
+    <span class="doctores-icon">👨‍⚕️</span> Nuestro Equipo Dental
+  </h2>
   <div class="doctores-list">
     <div
       class="doctor-card"
@@ -30,9 +39,13 @@
       (click)="abrirModal(i)"
       (keydown.enter)="abrirModal(i)"
       (keydown.space)="abrirModal(i)"
+      aria-label="Ver detalles de {{ doctor.nombre }}"
     >
-      <img [src]="doctor.img" [alt]="doctor.nombre">
+      <div class="doctor-card-img-wrap">
+        <img [src]="doctor.img" [alt]="doctor.nombre">
+      </div>
       <div class="doctor-nombre">{{ doctor.nombre }}</div>
+      <div class="doctor-especialidad">{{ doctor.especialidad }}</div>
     </div>
   </div>
 </section>
@@ -46,8 +59,10 @@
   (keydown)="onModalKeydown($event)"
 >
   <div class="doctor-modal-content" (click)="$event.stopPropagation()">
-    <span class="doctor-modal-close" (click)="cerrarModal()">&times;</span>
-    <img id="modal-doctor-img" [src]="doctorSeleccionado?.img" [alt]="doctorSeleccionado?.nombre">
+    <span class="doctor-modal-close" (click)="cerrarModal()" aria-label="Cerrar">&times;</span>
+    <div class="doctor-modal-img-wrap">
+      <img id="modal-doctor-img" [src]="doctorSeleccionado?.img" [alt]="doctorSeleccionado?.nombre">
+    </div>
     <div class="doctor-modal-info">
       <div><strong>Nombre:</strong> <span id="modal-doctor-nombre">{{ doctorSeleccionado?.nombre }}</span></div>
       <div><strong>Especialidad:</strong> <span id="modal-doctor-especialidad">{{ doctorSeleccionado?.especialidad }}</span></div>

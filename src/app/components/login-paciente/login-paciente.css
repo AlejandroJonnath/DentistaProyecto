@@ -1,0 +1,134 @@
+/* Fuente moderna y agradable */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body, .login-paciente-form, .login-paciente-form * {
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Cubre la navbar */
+.login-navbar-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70px;
+  background: #fff;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Contenedor del formulario centrado con fondo degradado */
+.login-paciente-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(120deg, #e3f2fd 0%, #bbdefb 100%);
+}
+
+/* Animación de entrada para el formulario */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.login-paciente-form {
+  background: #f5faff;
+  padding: 36px 32px 32px 32px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.13);
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 370px;
+  width: 100%;
+  animation: fadeInUp 0.8s cubic-bezier(.23,1.02,.47,.98);
+  transition: box-shadow 0.3s;
+}
+
+.login-paciente-form:hover {
+  box-shadow: 0 12px 40px rgba(25, 118, 210, 0.18);
+}
+
+.login-paciente-form h2 {
+  margin-bottom: 22px;
+  color: #1976d2;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  animation: fadeInUp 0.7s 0.1s backwards;
+}
+
+.login-paciente-form label {
+  margin-top: 14px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #1976d2;
+  letter-spacing: 0.5px;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+}
+
+.login-paciente-form input {
+  padding: 10px 12px;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 1.08rem;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+}
+/* Responsive para móviles */
+@media (max-width: 480px) {
+  .login-paciente-form {
+    min-width: 90vw;
+    max-width: 98vw;
+    padding: 24px 8vw 24px 8vw;
+  }
+  .login-paciente-container {
+    min-height: 70vh;
+    padding-top: 30px;
+  }
+}
+
+.login-paciente-form input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px #90caf9;
+}
+
+.login-paciente-form button {
+  margin-top: 20px;
+  background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.5px;
+  animation: fadeInUp 0.7s 0.2s backwards;
+}
+
+.login-paciente-form button:hover {
+  background: linear-gradient(90deg, #1565c0 60%, #42a5f5 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(25, 118, 210, 0.18);
+}
+
+/* Animación para los labels e inputs */
+.login-paciente-form label,
+.login-paciente-form input {
+  animation: fadeInUp 0.7s;
+}
