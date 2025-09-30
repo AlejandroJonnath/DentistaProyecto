@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NgIf, NgFor, CommonModule } from '@angular/common'; // <-- Agrega esto
-// Importar Anime.js correctamente para Angular y TypeScript
-// @ts-ignore
-import anime from 'animejs';
 
 interface Doctor {
   nombre: string;
@@ -55,38 +52,6 @@ export class Main {
   modalAbierto = false;
   doctorSeleccionado: Doctor | null = null;
 
-  ngAfterViewInit() {
-    // Animar las cards de servicios
-    anime({
-      targets: '.servicio-card',
-      opacity: [0, 1],
-      translateY: [40, 0],
-      scale: [0.98, 1],
-      delay: anime.stagger(120, {start: 300}),
-      duration: 900,
-      easing: 'easeOutElastic(1, .8)'
-    });
-    // Animar las cards de doctores
-    anime({
-      targets: '.doctor-card',
-      opacity: [0, 1],
-      translateY: [40, 0],
-      scale: [0.98, 1],
-      delay: anime.stagger(120, {start: 700}),
-      duration: 900,
-      easing: 'easeOutElastic(1, .8)'
-    });
-    // Animar las secciones
-    anime({
-      targets: ['.servicios-section', '.doctores-section'],
-      opacity: [0, 1],
-      scale: [0.97, 1],
-      duration: 1000,
-      easing: 'easeOutQuad',
-      delay: 100
-    });
-  }
-
   abrirModal(idx: number) {
     this.doctorSeleccionado = this.doctores[idx];
     this.modalAbierto = true;
@@ -94,14 +59,6 @@ export class Main {
       const modal = document.getElementById('doctor-modal');
       modal?.focus();
       document.body.classList.add('modal-open');
-      // Animar el modal con Anime.js
-      anime({
-        targets: '.doctor-modal-content',
-        opacity: [0, 1],
-        scale: [0.95, 1],
-        duration: 700,
-        easing: 'easeOutBack'
-      });
     });
   }
 
