@@ -154,6 +154,43 @@ body, .login-paciente-form, .login-paciente-form * {
   animation: fadeInUp 0.7s;
 }
 
+/* Botón 'Atrás' en la barra superior de login-paciente */
+.login-paciente-back-btn {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, #1565c0 60%, #42a5f5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 22px 8px 16px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  transition: background 0.2s;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  outline: none;
+}
+
+.login-paciente-back-btn:hover {
+  background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+  /* Sin animación de transform, solo cambio de color */
+}
+
+@media (max-width: 600px) {
+  .login-paciente-back-btn {
+    left: 8px;
+    padding: 6px 12px 6px 10px;
+    font-size: 0.95rem;
+  }
+}
+
 /* Responsive para móviles */
 @media (max-width: 480px) {
   .login-paciente-form {
