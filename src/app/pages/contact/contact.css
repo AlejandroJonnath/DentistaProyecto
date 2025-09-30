@@ -1,95 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 .contact-section {
-  background: linear-gradient(135deg, #e3f6fc 0%, #fafdff 100%);
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(30,144,184,0.07);
-  max-width: 700px;
-  margin: 2.5rem auto;
-  padding: 2.5rem 2vw;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #e3f6fc 0%, #fafdff 100%);
+  border-radius: 28px;
+  box-shadow: 0 12px 40px rgba(30,144,184,0.13);
+  max-width: 800px;
+  margin: 3.5rem auto;
+  padding: 3.5rem 2vw 4rem 2vw;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-title {
   color: #1e90b8;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
+  margin-bottom: 2.2rem;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(90deg, #e3f6fc 60%, #b2e0ee 100%);
+  border-radius: 18px;
+  padding: 0.7rem 2rem;
+  box-shadow: 0 2px 12px rgba(30,144,184,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .contact-desc {
   text-align: center;
   color: #0a6c8e;
-  font-size: 1.15rem;
-  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  margin-bottom: 2.2rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
 }
 
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.2rem;
+  width: 100%;
 }
 
 .contact-card {
   background: #fff;
   border: 1.5px solid #b2e0ee;
-  border-radius: 14px;
-  box-shadow: 0 2px 10px rgba(30,144,184,0.06);
-  padding: 1.2rem 1.5rem;
-  font-size: 1.1rem;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(30,144,184,0.11);
+  padding: 2.2rem 2rem 2rem 2rem;
+  font-size: 1.15rem;
   color: #0a6c8e;
   display: flex;
-  align-items: center;      /* Centra verticalmente */
-  gap: 2.5rem;              /* Más espacio para imágenes grandes */
+  align-items: center;
+  gap: 2.5rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
 .contact-photo {
-  width: 200px;             /* Mucho más grande */
-  height: 200px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #b2e0ee;
+  border: 3px solid #b2e0ee;
   background: #e3f6fc;
   box-shadow: 0 2px 8px rgba(30,144,184,0.10);
-  flex-shrink: 0;           /* Evita que la imagen se reduzca */
+  flex-shrink: 0;
 }
 
 .contact-card > div {
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* Centra el texto verticalmente respecto a la imagen */
-  min-width: 0;             /* Evita desbordamientos */
+  justify-content: center;
+  min-width: 0;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
 }
 
 .contact-card strong {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   color: #1e90b8;
   display: block;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  margin-bottom: 0.2rem;
+  text-align: center;
 }
 
 .contact-card span {
   color: #3a4d5c;
-  font-size: 1rem;
+  font-size: 1.08rem;
   display: block;
   margin-top: 0.2rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  text-align: justify;
 }
 
 .contact-extra {
   color: #0a6c8e;
-  font-size: 0.98rem;
+  font-size: 1.05rem;
   font-style: italic;
   margin-top: 0.3rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  text-align: center;
 }
 
 .contact-team-extra {
   margin-top: 2.5rem;
   text-align: center;
   color: #0a6c8e;
-  font-size: 1.08rem;
+  font-size: 1.18rem;
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
 }
 
 .contact-team-icon {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-right: 0.3rem;
 }
 
@@ -97,24 +125,39 @@
   .contact-section {
     padding: 1.2rem 1vw;
     margin: 1.2rem 0.5vw;
+    border-radius: 18px;
   }
   .contact-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+  }
+  .contact-list {
+    gap: 1.2rem;
   }
   .contact-card {
     padding: 0.8rem 1rem;
     font-size: 1rem;
     flex-direction: column;
-    align-items: center;    /* Centra imagen y texto en móviles */
+    align-items: center;
     gap: 1rem;
+    border-radius: 14px;
   }
   .contact-photo {
-    width: 140px;           /* Más grande en móviles también */
-    height: 140px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
   }
   .contact-card > div {
-    align-items: center;    /* Centra el texto debajo de la imagen */
+    align-items: center;
     text-align: center;
+  }
+  .contact-card strong {
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+  }
+  .contact-card span {
+    font-size: 0.98rem;
   }
 }
