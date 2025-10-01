@@ -1,0 +1,203 @@
+/* Barra superior */
+.dentist-bar {
+	width: 100vw;
+	background: linear-gradient(90deg, #0d47a1 60%, #42a5f5 100%);
+	color: #fff;
+	padding: 1rem 0;
+	text-align: center;
+	font-size: 1.3rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	box-shadow: 0 2px 8px rgba(13, 71, 161, 0.15);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.doctor-welcome-container {
+	margin-top: 4.5rem;
+	padding: 2rem;
+	background: #f8fafc;
+	border-radius: 18px;
+	box-shadow: 0 4px 24px rgba(66, 165, 245, 0.08);
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.doctor-title {
+	font-size: 2.2rem;
+	color: #1565c0;
+	margin-bottom: 0.5rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.doctor-description {
+	font-size: 1.1rem;
+	color: #333;
+	margin-bottom: 0.5rem;
+	text-align: center;
+}
+
+.doctor-actions {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	margin-top: 1.5rem;
+	flex-wrap: wrap;
+}
+
+.doctor-action-btn {
+	background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 0.8rem 1.6rem;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+	transition: background 0.2s, transform 0.2s;
+}
+.doctor-action-btn:disabled {
+	background: #bdbdbd;
+	color: #fff;
+	cursor: not-allowed;
+}
+.doctor-action-btn:not(:disabled):hover {
+	background: linear-gradient(90deg, #1565c0 60%, #42a5f5 100%);
+	transform: translateY(-2px) scale(1.04);
+}
+
+/* Modal estilos */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(13, 71, 161, 0.18);
+	z-index: 2000;
+}
+.modal-historial {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0 8px 32px rgba(13, 71, 161, 0.18);
+	z-index: 2100;
+	min-width: 340px;
+	max-width: 90vw;
+	width: 700px;
+	padding: 2rem 2.5rem 1.5rem 2.5rem;
+	animation: modalIn 0.25s ease;
+}
+@keyframes modalIn {
+	from { opacity: 0; transform: translate(-50%, -60%); }
+	to { opacity: 1; transform: translate(-50%, -50%); }
+}
+.modal-content h2 {
+	color: #1565c0;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+.modal-content .error {
+	color: #d32f2f;
+	background: #ffebee;
+	border-radius: 6px;
+	padding: 0.5rem 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+.modal-content table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 1rem;
+	background: #f5faff;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.modal-content th, .modal-content td {
+	padding: 0.7rem 0.5rem;
+	text-align: left;
+}
+.modal-content th {
+	background: #1976d2;
+	color: #fff;
+	font-weight: 600;
+}
+.modal-content td {
+	border-bottom: 1px solid #e3eaf2;
+	color: #333;
+}
+.modal-content ul {
+	margin: 0;
+	padding-left: 1.2rem;
+}
+.close-modal-btn {
+	background: #1976d2;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 0.6rem 1.2rem;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+	transition: background 0.2s, transform 0.2s;
+	display: block;
+	margin: 0 auto;
+}
+.close-modal-btn:hover {
+	background: #1565c0;
+	transform: scale(1.04);
+}
+
+/* Navbar superior */
+.doctor-navbar {
+  width: 100vw;
+  background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+.doctor-navbar-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.doctor-navbar-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.doctor-navbar-logout {
+  background: #fff;
+  color: #1976d2;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.doctor-navbar-logout:hover {
+  background: #1976d2;
+  color: #fff;
+  transform: scale(1.05);
+}

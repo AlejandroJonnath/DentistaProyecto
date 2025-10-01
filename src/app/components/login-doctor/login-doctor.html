@@ -1,19 +1,17 @@
 <div class="login-doctor-navbar">
-  <button class="login-doctor-back-btn" routerLink="/" aria-label="Volver al inicio">&#8592; Atrás</button>
+  <a class="login-doctor-back-btn" routerLink="/" aria-label="Volver al inicio">&#8592; Atrás</a>
   <span class="login-doctor-navbar-title">Bienvenido al Módulo de Doctor</span>
 </div>
 <div class="login-doctor-container">
-  <form class="login-doctor-form">
-  <h2>Ingreso al Módulo de Doctor</h2>
-  <label for="nombre">Nombre:</label>
-  <input id="nombre" name="nombre" type="text" required placeholder="Ingrese su nombre" />
+  <form class="login-doctor-form" (ngSubmit)="onSubmit()">
+    <h2>Ingreso al Módulo de Doctor</h2>
+    <label for="correo">Correo:</label>
+    <input id="correo" name="correo" type="email" [(ngModel)]="email" required placeholder="Ingrese su correo" />
 
-  <label for="correo">Correo:</label>
-  <input id="correo" name="correo" type="email" required placeholder="Ingrese su correo" />
+    <label for="contrasena">Contraseña:</label>
+    <input id="contrasena" name="contrasena" type="password" [(ngModel)]="password" required placeholder="Ingrese su contraseña" />
 
-  <label for="contrasena">Contraseña:</label>
-  <input id="contrasena" name="contrasena" type="password" required placeholder="Ingrese su contraseña" />
-
-  <button type="submit"><span>Ingresar</span></button>
+    <button type="submit"><span>Ingresar</span></button>
+    <div *ngIf="error" class="login-error">{{ error }}</div>
   </form>
 </div>

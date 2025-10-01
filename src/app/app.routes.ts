@@ -8,6 +8,7 @@ import { Paciente } from './pages/paciente/paciente';
 import { Doctor } from './pages/doctor/doctor';
 import { LoginDoctor } from './components/login-doctor/login-doctor';
 import { LoginPaciente } from './components/login-paciente/login-paciente';
+import { Doctorsito } from './modules/doctorsito/doctorsito';
 
 
 export const routes: Routes = [
@@ -19,6 +20,7 @@ export const routes: Routes = [
     { path: 'paciente', component: Paciente },
     { path: 'logindoctor', component: LoginDoctor },
     { path: 'loginpaciente', component: LoginPaciente },
+    { path: 'doctorsito', component: Doctorsito },
     { path: '**', redirectTo: '' }
 
 ];

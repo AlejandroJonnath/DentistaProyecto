@@ -1,1 +1,66 @@
-<p>doctorsito works!</p>
+<!-- Navbar superior -->
+<nav class="doctor-navbar">
+  <div class="doctor-navbar-content">
+    <span class="doctor-navbar-title">DentistaPro</span>
+    <button class="doctor-navbar-logout" (click)="cerrarSesion()">Cerrar sesión</button>
+  </div>
+</nav>
+
+<div class="doctor-welcome-container">
+  <h1 class="doctor-title">Bienvenido Doctor</h1>
+  <p class="doctor-description">
+    En este módulo podrá:
+  </p>
+  <ul>
+    <li>Ver el historial clínico de los pacientes</li>
+    <li>Ver las recetas de los pacientes</li>
+    <li>Ver las citas que tiene el día de hoy</li>
+    <li>Podrá añadir notas solo visibles para doctores</li>
+  </ul>
+  <div class="doctor-actions">
+    <button class="doctor-action-btn" (click)="abrirModalHistorial()">Historial clínico</button>
+    <button class="doctor-action-btn" disabled>Recetas</button>
+    <button class="doctor-action-btn" disabled>Citas para usted</button>
+    <button class="doctor-action-btn" disabled>Notas para doctores</button>
+  </div>
+</div>
+
+<!-- Modal para historial clínico -->
+<div class="modal-overlay" *ngIf="modalHistorialAbierto" (click)="cerrarModalHistorial()"></div>
+<div class="modal-historial" *ngIf="modalHistorialAbierto">
+  <div class="modal-content">
+    <h2>Historial de Pacientes</h2>
+    <div *ngIf="error" class="error">{{ error }}</div>
+    <table *ngIf="patients.length">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>DNI</th>
+          <th>Fecha de nacimiento</th>
+          <th>Género</th>
+          <th>Historial médico</th>
+          <th>Creado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of patients">
+          <td>{{ p.name }}</td>
+          <td>{{ p.dni }}</td>
+          <td>{{ p.birthDate | date:'yyyy-MM-dd' }}</td>
+          <td>{{ p.gender }}</td>
+          <td>
+            <ul>
+              <li *ngFor="let h of p.medicalHistory">{{ h }}</li>
+            </ul>
+          </td>
+          <td>{{ p.createdAt | date:'yyyy-MM-dd' }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="!patients.length && !error">No hay pacientes registrados.</div>
+    <button class="close-modal-btn" (click)="cerrarModalHistorial()">Cerrar</button>
+  </div>
+</div>
+<div class="dentist-bar">
+  Sonríe, tu salud dental es nuestra prioridad.
+</div>

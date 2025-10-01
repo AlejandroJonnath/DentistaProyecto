@@ -7,7 +7,7 @@ import { About } from './pages/about/about';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Navbar, Footer],
+  imports: [RouterOutlet, Header, Navbar, Footer,],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
