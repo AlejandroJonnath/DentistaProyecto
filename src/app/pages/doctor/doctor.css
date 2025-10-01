@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+
 /* Grid layout para organización profesional */
 .doctor-grid {
   display: grid;
@@ -103,7 +106,7 @@
     font-size: 1rem;
   }
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 
 .doctor-main-container {
   display: flex;

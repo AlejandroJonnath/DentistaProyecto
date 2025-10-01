@@ -31,21 +31,39 @@
   <h2 class="doctores-title">
     <span class="doctores-icon">👨‍⚕️</span> Nuestro Equipo Dental
   </h2>
-  <div class="doctores-list">
-    <div
-      class="doctor-card"
-      tabindex="0"
-      *ngFor="let doctor of doctores; let i = index"
-      (click)="abrirModal(i)"
-      (keydown.enter)="abrirModal(i)"
-      (keydown.space)="abrirModal(i)"
-      aria-label="Ver detalles de {{ doctor.nombre }}"
-    >
-      <div class="doctor-card-img-wrap">
-        <img [src]="doctor.img" [alt]="doctor.nombre">
+  <div
+    class="doctor-slider"
+    style="--width: 260px; --height: 320px; --quantity: 4;"
+  >
+    <div class="doctor-list">
+      <div class="doctor-item" style="--position: 1">
+        <div class="doctor-card-carousel">
+          <img src="assets/doctor1.jpg" alt="Dr. Juan Pérez">
+          <div class="doctor-nombre-carousel">Dra. Jastina Rojas</div>
+          <div class="doctor-especialidad-carousel">Ortodoncia</div>
+        </div>
       </div>
-      <div class="doctor-nombre">{{ doctor.nombre }}</div>
-      <div class="doctor-especialidad">{{ doctor.especialidad }}</div>
+      <div class="doctor-item" style="--position: 2">
+        <div class="doctor-card-carousel">
+          <img src="assets/doctor2.png" alt="Dra. María López">
+          <div class="doctor-nombre-carousel">Dr. Alejandro Bedoya</div>
+          <div class="doctor-especialidad-carousel">Endodoncia</div>
+        </div>
+      </div>
+      <div class="doctor-item" style="--position: 3">
+        <div class="doctor-card-carousel">
+          <img src="assets/doctor3.jpg" alt="Dr. Carlos Ruiz">
+          <div class="doctor-nombre-carousel">Dra. Davida Proaño</div>
+          <div class="doctor-especialidad-carousel">Implantología</div>
+        </div>
+      </div>
+      <div class="doctor-item" style="--position: 4">
+        <div class="doctor-card-carousel">
+          <img src="assets/doctor4.jpg" alt="Dra. Sofía Torres">
+          <div class="doctor-nombre-carousel">Dr. Alan Velasco</div>
+          <div class="doctor-especialidad-carousel">Odontopediatría</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
