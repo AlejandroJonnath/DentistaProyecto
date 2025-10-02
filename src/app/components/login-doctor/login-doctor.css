@@ -8,14 +8,12 @@ body, .login-doctor-form, .login-doctor-form * {
 /* Barra azul superior estilo doctor-navbar */
 .login-doctor-navbar {
   width: 100vw;
-  background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
   color: #fff;
   font-size: 1.35rem;
   font-weight: 600;
   text-align: center;
   padding: 15px 15px 20px 15px;
   margin-bottom: 24px;
-  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
   letter-spacing: 0.5px;
   position: fixed;
   top: 0;
@@ -155,21 +153,21 @@ body, .login-doctor-form, .login-doctor-form * {
 
 /* Estilos para el botón 'Atrás' en la barra superior */
 .login-doctor-back-btn {
-  position: absolute;
+  position: fixed;
   left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 24px;
+  transform: none;
   background: linear-gradient(90deg, #1565c0 60%, #42a5f5 100%);
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 8px 22px 8px 16px;
+  padding: 12px 22px 12px 22px;
   font-size: 1.08rem;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
   transition: background 0.2s;
-  z-index: 2;
+  z-index: 1002;
   display: flex;
   align-items: center;
   gap: 6px;

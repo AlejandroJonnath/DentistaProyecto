@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router'; // <-- Importa Router
+import { Router, RouterModule } from '@angular/router'; // <-- Importa Router y RouterModule
 import { LoginDoctorService } from '../../services/login-doctor';
 
 @Component({
   selector: 'app-login-doctor',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule], // <-- Agrega RouterModule aquí
   templateUrl: './login-doctor.html',
   styleUrl: './login-doctor.css'
 })

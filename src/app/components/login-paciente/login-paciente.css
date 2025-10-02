@@ -8,14 +8,14 @@ body, .login-paciente-form, .login-paciente-form * {
 /* Barra azul superior estilo doctor-navbar para paciente */
 .login-paciente-navbar {
   width: 100vw;
-  background: linear-gradient(90deg, #1976d2 60%, #64b5f6 100%);
+
   color: #fff;
   font-size: 1.35rem;
   font-weight: 600;
   text-align: center;
   padding: 15px 15px 20px 15px;
   margin-bottom: 24px;
-  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+
   letter-spacing: 0.5px;
   position: fixed;
   top: 0;
@@ -48,8 +48,7 @@ body, .login-paciente-form, .login-paciente-form * {
   justify-content: center;
   align-items: flex-start;
   min-height: 80vh;
-  background: linear-gradient(120deg, #e3f2fd 0%, #bbdefb 100%);
-  margin-top: 100px;
+  margin-top: 300px;
   /* Ajuste: sube el formulario pero no tan arriba, nivelado visualmente */
 }
 
@@ -156,21 +155,20 @@ body, .login-paciente-form, .login-paciente-form * {
 
 /* Botón 'Atrás' en la barra superior de login-paciente */
 .login-paciente-back-btn {
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: fixed;
+  top: 24px;      /* Distancia desde arriba */
+  left: 24px;     /* Distancia desde la izquierda */
+  z-index: 1000;  /* Para que esté por encima de otros elementos */
   background: linear-gradient(90deg, #1565c0 60%, #42a5f5 100%);
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 8px 22px 8px 16px;
+  padding: 12px 24px 14px 22px;
   font-size: 1.08rem;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
   transition: background 0.2s;
-  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 6px;

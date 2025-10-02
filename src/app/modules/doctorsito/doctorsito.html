@@ -7,17 +7,9 @@
 </nav>
 
 <div class="doctor-welcome-container">
-  <h1 class="doctor-title">Bienvenido Doctor</h1>
-  <p class="doctor-description">
-    En este módulo podrá:
-  </p>
-  <ul>
-    <li>Ver el historial clínico de los pacientes</li>
-    <li>Ver las recetas de los pacientes</li>
-    <li>Ver las citas que tiene el día de hoy</li>
-    <li>Podrá añadir notas solo visibles para doctores</li>
-  </ul>
-  <div class="doctor-actions">
+  <h1 class="doctor-title" style="text-align: center; width: 100%;">Bienvenido Doctor</h1>
+
+  <div class="doctor-actions" style="justify-content: center; gap: 1.5rem;">
     <button class="doctor-action-btn" (click)="abrirModalHistorial()">Historial clínico</button>
     <button class="doctor-action-btn" disabled>Recetas</button>
     <button class="doctor-action-btn" disabled>Citas Programadas</button>
