@@ -1,8 +1,8 @@
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 32px; /* Espacio entre logo y botones */
-  padding-left: 200px; /* Antes: 32px. Ahora: 72px para más espacio a la izquierda */
+  gap: 32px;
+  padding-left: 200px;
   margin-top: 10px;
 }
 
@@ -19,92 +19,130 @@
 
 .header-buttons {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   align-items: center;
-  justify-content: flex-end; /* Mueve los botones a la derecha */
+  justify-content: flex-end;
   flex: 1;
-  margin-left: auto;         /* Empuja los botones hacia la derecha */
-  padding-right: 48px;       /* Espacio desde el borde derecho */
+  margin-left: auto;
+  padding-right: 48px;
 }
 
-.btn {
-  position: relative;
-  width: 11em;
-  height: 4em;
-  outline: none;
-  transition: 0.1s;
+/* Botón Uiverse adaptado y un poco más grande */
+.header-buttons .fancy {
   background-color: transparent;
-  border: none;
-  font-size: 13px;
-  font-weight: bold;
-  color: #ddebf0;
+  border: 2px solid #2761c3;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #2761c3;
   cursor: pointer;
-  padding: 16px 38px;
-  border-radius: 30px; /* Bordes más redondeados */
-  box-shadow: 0 4px 18px rgba(0,0,0,0.10), 0 1.5px 4px rgba(30,144,184,0.10);
-  text-shadow: 1px 2px 6px rgba(0,0,0,0.25); /* Sombra negra al texto */
-  letter-spacing: 1px;
-  transition: 
-    transform 0.15s,
-    box-shadow 0.2s,
-    background-color 0.2s,
-    color 0.2s;
-}
-
-.btn:hover, .btn:focus {
-  transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18), 0 2px 8px rgba(30,144,184,0.13);
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
   outline: none;
-}
-
-.btn-pacientes {
-  background: linear-gradient(90deg, #ffb347 0%, #ff7f50 100%);
-  color: #fff;
-  border: 2px solid #ff9800;
-}
-
-.btn-pacientes:hover, .btn-pacientes:focus {
-  background: linear-gradient(90deg, #ff9800 0%, #ffb347 100%);
-  color: #fff;
-}
-
-.btn-doctores {
-  background: linear-gradient(90deg, #00bfff 0%, #1e90ff 100%);
-  color: #fff;
-  border: 2px solid #00bfff;
-}
-
-.btn-doctores:hover, .btn-doctores:focus {
-  background: linear-gradient(90deg, #1e90ff 0%, #00bfff 100%);
-  color: #fff;
-}
-
-/* Botones estilo Uiverse */
-button {
+  overflow: visible;
+  padding: 1em 2em; /* Más grande */
   position: relative;
-  width: 11em;
-  height: 4em;
-  outline: none;
-  transition: 0.1s;
-  background-color: transparent;
-  border: none;
-  font-size: 13px;
-  font-weight: bold;
-  color: #ddebf0;
-  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 1.15rem; /* Más grande */
 }
 
-#clip {
-  --color: #2761c3;
+.header-buttons .fancy::before {
+  content: " ";
+  width: 1.3rem;
+  height: 2px;
+  background: #2761c3;
+  top: 50%;
+  left: 1.2em;
   position: absolute;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  border: 5px double var(--color);
-  box-shadow: inset 0px 0px 15px #195480;
-  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+}
+
+.header-buttons .fancy .text {
+  font-size: 1.1em;
+  line-height: 1.2em;
+  padding-left: 1.5em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2761c3;
+}
+
+.header-buttons .fancy .top-key {
+  height: 2px;
+  width: 1.3rem;
+  top: -2px;
+  left: 0.7em;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.header-buttons .fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.3rem;
+  right: 1.5em;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.header-buttons .fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.7em;
+  right: 0.7em;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.header-buttons .fancy:hover {
+  color: white;
+  background: #2761c3;
+}
+
+.header-buttons .fancy:hover::before {
+  width: 1rem;
+  background: white;
+}
+
+.header-buttons .fancy:hover .text {
+  color: white;
+  padding-left: 1.2em;
+}
+
+.header-buttons .fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.header-buttons .fancy:hover .bottom-key-1,
+.header-buttons .fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}
+
+.header-buttons .fancy[routerlink="/loginpaciente"]:hover {
+  color: white;
+  background: #00bcd4; /* Cian */
+}
+
+.header-buttons .fancy[routerlink="/loginpaciente"]:hover::before {
+  background: white;
+}
+
+.header-buttons .fancy[routerlink="/loginpaciente"]:hover .text {
+  color: white;
 }
 
 .arrow {

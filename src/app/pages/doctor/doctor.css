@@ -94,6 +94,7 @@
   margin-left: 60px;
   font-size: inherit;
   font-weight: inherit;
+  color: #1976d2;
 }
 @media (max-width: 600px) {
   .doctor-back-btn {

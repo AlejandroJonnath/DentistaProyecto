@@ -1,36 +1,26 @@
 <div class="header-logo">
   <img src="assets/logo.png" alt="Clínica Dental" />
   <div class="header-buttons">
-    <button routerLink="/loginpaciente">
-      Pacientes
-      <div id="clip">
-        <div id="leftTop" class="corner"></div>
-        <div id="rightBottom" class="corner"></div>
-        <div id="rightTop" class="corner"></div>
-        <div id="leftBottom" class="corner"></div>
-      </div>
-      <span id="rightArrow" class="arrow"></span>
-      <span id="leftArrow" class="arrow"></span>
-    </button>
-    <button routerLink="/doctor">
-      Doctores
-      <div id="clip">
-        <div id="leftTop" class="corner"></div>
-        <div id="rightBottom" class="corner"></div>
-        <div id="rightTop" class="corner"></div>
-        <div id="leftBottom" class="corner"></div>
-      </div>
-      <span id="rightArrow" class="arrow"></span>
-      <span id="leftArrow" class="arrow"></span>
-    </button>
+    <a class="fancy" routerLink="/loginpaciente">
+      <span class="top-key"></span>
+      <span class="text">Pacientes</span>
+      <span class="bottom-key-1"></span>
+      <span class="bottom-key-2"></span>
+    </a>
+    <a class="fancy" routerLink="/doctor">
+      <span class="top-key"></span>
+      <span class="text">Doctores</span>
+      <span class="bottom-key-1"></span>
+      <span class="bottom-key-2"></span>
+    </a>
   </div>
 </div>
 
 <style>
 /* Mejor visibilidad para el texto del botón */
-.header-buttons button {
-  color: #1565c0;         /* Azul oscuro, buen contraste */
-  font-size: 1.10rem;     /* Más grande y legible */
+.header-buttons a {
+  color: #1565c0;         
+  font-size: 1.10rem;     
   font-weight: 700;
   
   background: #fff;       /* Fondo blanco para mejor contraste */
@@ -41,11 +31,11 @@
   text-align: center;      /* Centra el texto horizontalmente */
   display: flex;           /* Permite centrar vertical y horizontal */
   flex-direction: column;  /* Elementos en columna */
-  justify-content: center; /* Centra verticalmente */
-  align-items: center;     /* Centra horizontalmente */
+  justify-content: center; 
+  align-items: center;     
 }
 
-.header-buttons button:hover {
+.header-buttons a:hover {
   color: #27c39f;         /* Color de hover animado */
   background: #e3f2fd;
 }
